@@ -1,6 +1,6 @@
 .DS_Store
 node_modules
-npm-debug.log
+*.log
 coverage
 auto
 src
@@ -13,3 +13,5 @@ yarn.lock
 stats.json
 styleguide.config.js
 example
+styleguide
+tsconfig.styleguide.json

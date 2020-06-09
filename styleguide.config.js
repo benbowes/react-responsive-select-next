@@ -110,6 +110,7 @@ module.exports = {
           test: /\.tsx?$/,
           exclude: /node_modules/,
           loader: 'ts-loader',
+          options: { configFile: 'tsconfig.styleguidist.json' },
         },
         {
           test: /\.css$/,
