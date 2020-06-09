@@ -1,16 +1,15 @@
 import { IOutputSingleSelect } from '../../types/';
+import { isEqual } from '../../lib/isEqual';
 
 export function singleSelectBroadcastChange(
   currValue: IOutputSingleSelect,
   altered?: boolean,
   fn?: (changes: IOutputSingleSelect) => void,
-  prevValue?: IOutputSingleSelect,
+  prevValue?: IOutputSingleSelect
 ): void {
-  if (!fn) {
-    return;
-  }
+  if (!fn) return;
 
-  const shouldBroadcastChange = !(JSON.stringify(prevValue) === JSON.stringify(currValue));
+  const shouldBroadcastChange = !isEqual(prevValue, currValue);
 
   if (shouldBroadcastChange) {
     fn({

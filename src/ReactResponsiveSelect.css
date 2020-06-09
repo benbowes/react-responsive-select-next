@@ -37,7 +37,7 @@
   outline: 0;
 }
 
-.rrs--options-visible  .rrs__button {
+.rrs--options-visible .rrs__button {
   border-radius: 4px 4px 0 0;
 }
 
@@ -79,7 +79,7 @@
     position: static;
   }
 
-   .rrs.rrs--options-visible:after {
+  .rrs.rrs--options-visible:after {
     content: '';
     cursor: pointer;
     position: fixed;
@@ -92,7 +92,7 @@
     background: rgba(0, 0, 0, 0.5);
   }
 
-   .rrs--options-visible .rrs__options {
+  .rrs--options-visible .rrs__options {
     max-height: initial;
     position: fixed;
     font-size: 1.25rem;
@@ -106,7 +106,7 @@
   }
 }
 
- @keyframes fadeIn {
+@keyframes fadeIn {
   from {
     opacity: 0;
   }
@@ -276,4 +276,17 @@
 
 .rrs--options-visible .caret-icon {
   transform: rotate(180deg);
+}
+
+/* 
+
+  Badge
+
+*/
+
+.badge {
+  background: #f1f1f1;
+  padding: 0.25rem 1rem;
+  margin: 2px 10px 2px 0;
+  border-radius: 3px;
 }

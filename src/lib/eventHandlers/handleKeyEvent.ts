@@ -1,6 +1,6 @@
 import * as actionTypes from '../../constants/actionTypes';
 import { keyCodes } from '../../constants/keyCodes';
-import ReactResponsiveSelect from '../../ReactResponsiveSelect';
+import ReactResponsiveSelect from '../../react-responsive-select';
 import { IProps, IState } from '../../types/';
 import { preventDefaultForKeyCodes } from '../preventDefaultForKeyCodes';
 import { handleAlphaNumerical } from './handleAlphaNumerical';
@@ -12,35 +12,19 @@ interface TArgs {
   event: KeyboardEvent;
   state: IState;
   props: IProps;
-  ReactResponsiveSelectClassRef: ReactResponsiveSelect;
+  RRSClassRef: ReactResponsiveSelect;
 }
 
-export function handleKeyEvent({
-  event,
-  state,
-  props,
-  ReactResponsiveSelectClassRef,
-}: TArgs): void {
+export function handleKeyEvent({ event, state, props, RRSClassRef }: TArgs): void {
   const { multiselect, isOptionsPanelOpen, disabled } = state;
 
-  if (disabled) {
-    return;
-  }
+  if (disabled) return;
 
-  preventDefaultForKeyCodes(
-    [
-      keyCodes.ENTER,
-      keyCodes.SPACE,
-      keyCodes.ESCAPE,
-      keyCodes.UP,
-      keyCodes.DOWN,
-    ],
-    event,
-  );
+  preventDefaultForKeyCodes([keyCodes.ENTER, keyCodes.SPACE, keyCodes.ESCAPE, keyCodes.UP, keyCodes.DOWN], event);
 
   /* handle alpha-nemeric key press */
   if (/^[a-z0-9]+$/.test(event.key)) {
-    handleAlphaNumerical({ event, ReactResponsiveSelectClassRef, state });
+    handleAlphaNumerical({ event, RRSClassRef, state });
   }
 
   switch (event.keyCode) {
@@ -54,10 +38,7 @@ export function handleKeyEvent({
          * TODO add a test for this
          */
         if (multiselect) {
-          ReactResponsiveSelectClassRef.updateState(
-            { type: actionTypes.SET_OPTIONS_PANEL_CLOSED },
-            () => ReactResponsiveSelectClassRef.focusButton(),
-          );
+          RRSClassRef.updateState({ type: actionTypes.SET_OPTIONS_PANEL_CLOSED }, () => RRSClassRef.focusButton());
         }
       }
       break;
@@ -66,7 +47,7 @@ export function handleKeyEvent({
       /* can close the panel when open and focussed
        * can submit the form when closed and focussed */
       handleEnterPressed({
-        ReactResponsiveSelectClassRef,
+        RRSClassRef,
         event,
         props,
         state,
@@ -76,9 +57,9 @@ export function handleKeyEvent({
     case keyCodes.SPACE:
       /* close the panel and select option when open, or open the panel if closed */
       if (isOptionsPanelOpen) {
-        handleClick({ event, state, ReactResponsiveSelectClassRef });
+        handleClick({ event, state, RRSClassRef, props });
       } else {
-        ReactResponsiveSelectClassRef.updateState({
+        RRSClassRef.updateState({
           type: actionTypes.SET_OPTIONS_PANEL_OPEN,
         });
       }
@@ -86,9 +67,8 @@ export function handleKeyEvent({
 
     case keyCodes.ESCAPE:
       /* remove focus from the panel when focussed */
-      ReactResponsiveSelectClassRef.updateState(
-        { type: actionTypes.SET_OPTIONS_PANEL_CLOSED_NO_SELECTION },
-        () => ReactResponsiveSelectClassRef.focusButton(),
+      RRSClassRef.updateState({ type: actionTypes.SET_OPTIONS_PANEL_CLOSED_NO_SELECTION }, () =>
+        RRSClassRef.focusButton()
       );
       break;
 
@@ -97,7 +77,7 @@ export function handleKeyEvent({
        * will not decrement selection if options panel closed
        * if panel open, will decrement up the options list */
       handleKeyUpOrDownPressed({
-        ReactResponsiveSelectClassRef,
+        RRSClassRef,
         state,
         type: 'DECREMENT',
       });
@@ -108,7 +88,7 @@ export function handleKeyEvent({
        * will not increment selection if options panel closed
        * if panel open, will increment down the options list */
       handleKeyUpOrDownPressed({
-        ReactResponsiveSelectClassRef,
+        RRSClassRef,
         state,
         type: 'INCREMENT',
       });
