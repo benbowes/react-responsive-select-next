@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { render, act, cleanup, fireEvent } from '@testing-library/react';
 import { BASIC_OPTIONS, MULTISELECT_OPTIONS } from '../__mocks__/options';
-import RRS from '../react-responsive-select';
+import { Select } from '../';
 
 /**
  *  **SELECTED ITEM** is the item set with selectedValue or the first **FIRST AVAILABLE OPTION**.
@@ -30,7 +30,7 @@ describe('Keyboard MultiSelect', () => {
     });
 
     test('hitting **DOWN** key should open the options panel and highlight **SELECTED ITEM**', () => {
-      const wrapper = render(<RRS multiselect name="cars" selectedValues={['zonda']} options={BASIC_OPTIONS} />);
+      const wrapper = render(<Select multiselect name="cars" selectedValues={['zonda']} options={BASIC_OPTIONS} />);
 
       const select = wrapper.getByTestId('cars');
       const rrsOption9 = wrapper.getByTestId('rrs-option_cars_9');
@@ -41,7 +41,7 @@ describe('Keyboard MultiSelect', () => {
       // Hit down key
       fireEvent.keyDown(select, { key: 'Down', keyCode: 40 });
 
-      // RRS is open
+      // Select is open
       expect(select.classList.contains('rrs')).toEqual(true);
       expect(select.classList.contains('rrs--options-visible')).toEqual(true);
 
@@ -52,7 +52,7 @@ describe('Keyboard MultiSelect', () => {
     });
 
     test('hitting **UP** key should open the options panel and highlight **SELECTED ITEM**', () => {
-      const wrapper = render(<RRS multiselect name="cars" selectedValues={['zonda']} options={BASIC_OPTIONS} />);
+      const wrapper = render(<Select multiselect name="cars" selectedValues={['zonda']} options={BASIC_OPTIONS} />);
 
       const select = wrapper.getByTestId('cars');
       const rrsOption9 = wrapper.getByTestId('rrs-option_cars_9');
@@ -63,7 +63,7 @@ describe('Keyboard MultiSelect', () => {
       // Hit up key
       fireEvent.keyDown(select, { key: 'Up', keyCode: 38 });
 
-      // RRS is open
+      // Select is open
       expect(select.classList.contains('rrs')).toEqual(true);
       expect(select.classList.contains('rrs--options-visible')).toEqual(true);
 
@@ -74,7 +74,7 @@ describe('Keyboard MultiSelect', () => {
     });
 
     test('hitting **SPACE** key should open the options panel and highlight **SELECTED ITEM**', () => {
-      const wrapper = render(<RRS multiselect name="cars" selectedValues={['zonda']} options={BASIC_OPTIONS} />);
+      const wrapper = render(<Select multiselect name="cars" selectedValues={['zonda']} options={BASIC_OPTIONS} />);
 
       const select = wrapper.getByTestId('cars');
       const rrsOption9 = wrapper.getByTestId('rrs-option_cars_9');
@@ -85,7 +85,7 @@ describe('Keyboard MultiSelect', () => {
       // Hit space key
       fireEvent.keyDown(select, { key: 'Space', keyCode: 32 });
 
-      // RRS is open
+      // Select is open
       expect(select.classList.contains('rrs')).toEqual(true);
       expect(select.classList.contains('rrs--options-visible')).toEqual(true);
 
@@ -98,7 +98,7 @@ describe('Keyboard MultiSelect', () => {
     test('hitting **ENTER** key should submit the form', () => {
       const submitSpy = jest.fn();
       const wrapper = render(
-        <RRS multiselect name="cars" onSubmit={submitSpy} selectedValues={['zonda']} options={BASIC_OPTIONS} />
+        <Select multiselect name="cars" onSubmit={submitSpy} selectedValues={['zonda']} options={BASIC_OPTIONS} />
       );
 
       const select = wrapper.getByTestId('cars');
@@ -116,7 +116,7 @@ describe('Keyboard MultiSelect', () => {
     test('hitting **a-z or 0-9** keys in quick succession (250ms) should open the options panel and highlight first item that starts with key pressed character/s (must be a **FOCUSSABLE ITEM**)', () => {
       jest.useFakeTimers();
 
-      const wrapper = render(<RRS multiselect name="cars" options={BASIC_OPTIONS} />);
+      const wrapper = render(<Select multiselect name="cars" options={BASIC_OPTIONS} />);
 
       const select = wrapper.getByTestId('cars');
       const rrsOption4 = wrapper.getByTestId('rrs-option_cars_4');
@@ -142,7 +142,7 @@ describe('Keyboard MultiSelect', () => {
     });
 
     test('hitting **DOWN** key should decrement down the options panel - highlighting next potential selection (must be a **FOCUSSABLE ITEM**). When the bottom of the options list is reached, it cycles the next potential selection up to the top of the list. It cycles infinitely', () => {
-      const wrapper = render(<RRS multiselect name="cars" options={MULTISELECT_OPTIONS} />);
+      const wrapper = render(<Select multiselect name="cars" options={MULTISELECT_OPTIONS} />);
 
       const select = wrapper.getByTestId('cars');
       const rrsOption3 = wrapper.getByTestId('rrs-option_cars_3');
@@ -175,7 +175,7 @@ describe('Keyboard MultiSelect', () => {
     });
 
     test('hitting **UP** key should increment up the options panel - highlighting next potential selection (must be a **FOCUSSABLE ITEM**). When the top of the options list is reached, it cycles the next potential selection to the bottom of the list. It cycles infinitely', () => {
-      const wrapper = render(<RRS multiselect name="cars" options={MULTISELECT_OPTIONS} />);
+      const wrapper = render(<Select multiselect name="cars" options={MULTISELECT_OPTIONS} />);
 
       const select = wrapper.getByTestId('cars');
       const rrsOption3 = wrapper.getByTestId('rrs-option_cars_3');
@@ -203,7 +203,7 @@ describe('Keyboard MultiSelect', () => {
     test('hitting **a-z or 0-9** keys in quick succession (250ms) should highlight first item that starts with key pressed character/s  (must be a **FOCUSSABLE ITEM**)', () => {
       jest.useFakeTimers();
 
-      const wrapper = render(<RRS multiselect name="cars" options={MULTISELECT_OPTIONS} />);
+      const wrapper = render(<Select multiselect name="cars" options={MULTISELECT_OPTIONS} />);
 
       const select = wrapper.getByTestId('cars');
       const rrsOption3 = wrapper.getByTestId('rrs-option_cars_3');
@@ -227,7 +227,7 @@ describe('Keyboard MultiSelect', () => {
 
     test('hitting **ENTER** key should select the current highlighted option and close the options panel, but not blur the Select Input', () => {
       const submitSpy = jest.fn();
-      const wrapper = render(<RRS multiselect name="cars" onSubmit={submitSpy} options={MULTISELECT_OPTIONS} />);
+      const wrapper = render(<Select multiselect name="cars" onSubmit={submitSpy} options={MULTISELECT_OPTIONS} />);
 
       const select = wrapper.getByTestId('cars');
       const rrsLabel = wrapper.getByTestId('rrs-label_cars');
@@ -258,7 +258,13 @@ describe('Keyboard MultiSelect', () => {
     test("hitting **ESC** key should close the options panel and keep the user's last selection, or the initial selection, but not blur the Select Input", () => {
       const submitSpy = jest.fn();
       const wrapper = render(
-        <RRS multiselect name="cars" selectedValues={['subaru']} onSubmit={submitSpy} options={MULTISELECT_OPTIONS} />
+        <Select
+          multiselect
+          name="cars"
+          selectedValues={['subaru']}
+          onSubmit={submitSpy}
+          options={MULTISELECT_OPTIONS}
+        />
       );
 
       const select = wrapper.getByTestId('cars');

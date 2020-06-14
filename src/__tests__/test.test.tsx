@@ -1,13 +1,13 @@
 import * as React from 'react';
 import { render, cleanup, fireEvent } from '@testing-library/react';
 import { BASIC_OPTIONS } from '../__mocks__/options';
-import RRS from '../react-responsive-select';
+import { Select } from '../';
 
 afterEach(cleanup);
 
 describe('SingleSelect', () => {
   test('MouseDown on an option will select it', () => {
-    const wrapper = render(<RRS name="cars" options={BASIC_OPTIONS} />);
+    const wrapper = render(<Select name="cars" options={BASIC_OPTIONS} />);
 
     // Open options panel
     const select = wrapper.getByTestId('cars');
@@ -25,7 +25,7 @@ describe('SingleSelect', () => {
 describe('MultiSelect', () => {
   test('MouseDown on an option will add it to the selected options', () => {
     const wrapper = render(
-      <RRS multiselect={true} noSelectionLabel="Please select" name="cars" options={BASIC_OPTIONS} />
+      <Select multiselect={true} noSelectionLabel="Please select" name="cars" options={BASIC_OPTIONS} />
     );
 
     // Open options panel

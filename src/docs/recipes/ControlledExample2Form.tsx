@@ -1,5 +1,5 @@
 import * as React from 'react';
-import ReactResponsiveSelect, { IOption, IOutputSingleSelect, CaretIcon } from '../../react-responsive-select'; // 'react-responsive-select'
+import { Select, IOption, IOutputSingleSelect, CaretIcon } from '../../react-responsive-select'; // 'react-responsive-select'
 
 interface IFormProps {
   brands: IOption[];
@@ -27,7 +27,7 @@ export const Form = ({
 }: IFormProps): React.ReactElement => (
   <form className="form">
     <div className="form__item">
-      <ReactResponsiveSelect
+      <Select
         name="brand"
         key="brands"
         options={brands}
@@ -39,7 +39,7 @@ export const Form = ({
       />
     </div>
     <div className="form__item">
-      <ReactResponsiveSelect
+      <Select
         name="models"
         key={`models_${selectedBrand}`}
         options={models}
@@ -52,7 +52,7 @@ export const Form = ({
       />
     </div>
     <div className="form__item">
-      <ReactResponsiveSelect
+      <Select
         name="colour"
         key={`colours_${selectedBrand}_${selectedModel}`}
         options={colours}

@@ -3,7 +3,7 @@
   "name": "react-responsive-select-next",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
-  "version": "6.0.0-aplha.1",
+  "version": "6.0.0-aplha.4",
   "files": [
     "dist",
     "src"
@@ -12,10 +12,11 @@
     "node": ">=10"
   },
   "scripts": {
+    "prepublishOnly": "npm run build",
     "start": "npx styleguidist server",
     "build:styleguide": "npx styleguidist build --ts",
     "build": "tsdx build && npm run copyfiles && npm run deleteUnwantedDistEntries && npm run build:styleguide",
-    "copyfiles": "cp src/ReactResponsiveSelect.css dist/ReactResponsiveSelect.css",
+    "copyfiles": "cp src/react-responsive-select.css dist/react-responsive-select.css",
     "deleteUnwantedDistEntries": "rm -rf dist/docs && rm -rf dist/__mocks__",
     "test": "tsdx test --passWithNoTests",
     "lint": "tsdx lint",

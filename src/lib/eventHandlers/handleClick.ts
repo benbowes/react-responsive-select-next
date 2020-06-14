@@ -1,5 +1,5 @@
 import * as actionTypes from '../../constants/actionTypes';
-import ReactResponsiveSelect from '../../react-responsive-select';
+import { Select } from '../../react-responsive-select';
 import { containsClassName } from '../containsClassName';
 
 import { IState, IProps } from '../../types/';
@@ -7,7 +7,7 @@ import { IState, IProps } from '../../types/';
 interface TArgs {
   event: MouseEvent | KeyboardEvent;
   state: IState;
-  RRSClassRef: ReactResponsiveSelect;
+  RRSClassRef: Select;
   props: IProps;
 }
 

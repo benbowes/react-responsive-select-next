@@ -1,11 +1,11 @@
 import * as actionTypes from '../../constants/actionTypes';
-import ReactResponsiveSelect from '../../react-responsive-select';
+import { Select } from '../../react-responsive-select';
 import { IOption, IState } from '../../types/';
 
 interface IArgs {
   event: KeyboardEvent;
   state: IState;
-  RRSClassRef: ReactResponsiveSelect;
+  RRSClassRef: Select;
 }
 
 let stringMatch: string = '';

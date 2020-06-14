@@ -1,7 +1,7 @@
 Listening for RRS changes with the "onListen" prop. This example blocks body scolling on small screen when options are open
 
 ```jsx
-import ReactResponsiveSelect, { CaretIcon } from '../../react-responsive-select'; // 'react-responsive-select'
+import { Select, CaretIcon } from '../../react-responsive-select'; // 'react-responsive-select'
 
 let prevIsOpenValue;
 
@@ -16,7 +16,7 @@ function onListen(isOpen, name, actionType) {
 }
 
 <form>
-  <ReactResponsiveSelect
+  <Select
     onListen={onListen}
     name="carType1"
     options={[

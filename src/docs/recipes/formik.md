@@ -1,7 +1,7 @@
 Using ReactResponsiveSelect with Formik
 
 ```jsx
-import ReactResponsiveSelect, { CaretIcon, ErrorIcon } from '../../react-responsive-select'; // 'react-responsive-select'
+import { Select, CaretIcon, ErrorIcon } from '../../react-responsive-select'; // 'react-responsive-select'
 import { Formik } from 'formik';
 import * as Yup from 'yup';
 
@@ -24,7 +24,7 @@ import * as Yup from 'yup';
       <form onSubmit={handleSubmit}>
         <p>Trigger an error by selecting "Any"</p>
         <div className={errors.car && touched.car ? 'has-error' : ''}>
-          <ReactResponsiveSelect
+          <Select
             name="car"
             selectedValue={values.car}
             caretIcon={<CaretIcon key="car-caret" />}

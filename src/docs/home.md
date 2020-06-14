@@ -1,5 +1,5 @@
 ```jsx noeditor
-import ReactResponsiveSelect, { CaretIcon, MultiSelectOptionMarkup, CheckboxIcon } from '../react-responsive-select'; // 'react-responsive-select'
+import { Select, CaretIcon, MultiSelectOptionMarkup, CheckboxIcon } from '../react-responsive-select'; // 'react-responsive-select'
 
 const Badge = ({ text }) => (
   <span>
@@ -64,7 +64,7 @@ const Badge = ({ text }) => (
     <h3>Single-select &amp; multi-select modes</h3>
     <div className="row row--hero --margin-bottom-4">
       <div>
-        <ReactResponsiveSelect
+        <Select
           name="carType1"
           options={[
             { value: 'null', text: 'Any' },
@@ -85,7 +85,7 @@ const Badge = ({ text }) => (
         <div className="label">Single-select basic</div>
       </div>
       <div>
-        <ReactResponsiveSelect
+        <Select
           name="carType2"
           options={[
             {
@@ -123,7 +123,7 @@ const Badge = ({ text }) => (
         <div className="label">Single-select custom options</div>
       </div>
       <div>
-        <ReactResponsiveSelect
+        <Select
           name="carType3"
           onSelect={selectedOption => console.log('onSelect', selectedOption)}
           options={[
@@ -163,7 +163,7 @@ const Badge = ({ text }) => (
         <div className="label">Single-select custom label</div>
       </div>
       <div>
-        <ReactResponsiveSelect
+        <Select
           multiselect={true}
           onDeselect={deselectedOption => console.log('onDeselect', deselectedOption)}
           onSelect={selectedOption => console.log('onSelect', selectedOption)}

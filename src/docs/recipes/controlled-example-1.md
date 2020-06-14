@@ -1,7 +1,7 @@
 Selecting something in the first select will reset the second select.
 
 ```jsx
-import ReactResponsiveSelect, { CaretIcon } from '../../react-responsive-select'; // 'react-responsive-select'
+import { Select, CaretIcon } from '../../react-responsive-select'; // 'react-responsive-select'
 
 const DATA = [
   { year: 2000, quarters: [1, 2, 3, 4] },
@@ -47,7 +47,7 @@ const ControlledExample = () => {
     <form className="form">
       <div className="form__item">
         <label htmlFor="rrs-year-menu">Year</label>
-        <ReactResponsiveSelect
+        <Select
           selectedValue={selectedYear}
           name="year"
           options={years}
@@ -57,7 +57,7 @@ const ControlledExample = () => {
       </div>
       <div className="form__item">
         <label htmlFor="rrs-year-menu">Financial quarter</label>
-        <ReactResponsiveSelect
+        <Select
           key={selectedYear} // Added key, will reset this RRS when selectedYear changes
           selectedValue={selectedQuarter}
           name="quarters"

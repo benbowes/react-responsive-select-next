@@ -1,7 +1,7 @@
 `option.markup` allows you to add JSX into your options. In the below example, there are badges - any JSX will do.
 
 ```jsx
-import ReactResponsiveSelect, { CaretIcon } from '../../react-responsive-select'; // 'react-responsive-select'
+import { Select, CaretIcon } from '../../react-responsive-select'; // 'react-responsive-select'
 
 const Badge = ({ text }) => (
   <span>
@@ -13,7 +13,7 @@ const Badge = ({ text }) => (
 );
 
 <form>
-  <ReactResponsiveSelect
+  <Select
     name="make2"
     options={[
       {

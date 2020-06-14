@@ -12,7 +12,7 @@ import { IAction, IProps, IState } from './types/';
 import { MultiSelect } from './components/MultiSelect';
 import { SingleSelect } from './components/SingleSelect';
 
-export default class ReactResponsiveSelect extends React.Component<IProps, IState> {
+export class Select extends React.Component<IProps, IState> {
   public selectBox: HTMLDivElement | null;
   private reducer: (state: IState, action: IAction) => IState;
   private firstLoad: boolean;

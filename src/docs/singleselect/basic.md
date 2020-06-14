@@ -1,8 +1,8 @@
 ```jsx
-import ReactResponsiveSelect, { CaretIcon } from '../../react-responsive-select'; // 'react-responsive-select'
+import { Select, CaretIcon } from '../../react-responsive-select'; // 'react-responsive-select'
 
 <form>
-  <ReactResponsiveSelect
+  <Select
     name="carType1"
     options={[
       { value: 'null', text: 'Any' },

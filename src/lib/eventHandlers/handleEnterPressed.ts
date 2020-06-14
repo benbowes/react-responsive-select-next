@@ -1,12 +1,12 @@
 import * as actionTypes from '../../constants/actionTypes';
-import ReactResponsiveSelect from '../../react-responsive-select';
+import { Select } from '../../react-responsive-select';
 import { IProps, IState } from '../../types/';
 
 interface IArgs {
   event: KeyboardEvent;
   state: IState;
   props: IProps;
-  RRSClassRef: ReactResponsiveSelect;
+  RRSClassRef: Select;
 }
 
 export function handleEnterPressed({ event, state, props, RRSClassRef }: IArgs): void {

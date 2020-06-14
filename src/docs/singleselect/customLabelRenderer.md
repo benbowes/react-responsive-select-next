@@ -11,7 +11,7 @@ The customLabelRenderer function returns an option object. To use this feature, 
 ```
 
 ```jsx
-import ReactResponsiveSelect, { CaretIcon } from '../../react-responsive-select'; // 'react-responsive-select'
+import { Select, CaretIcon } from '../../react-responsive-select'; // 'react-responsive-select'
 
 const Badge = ({ text }) => (
   <span>
@@ -23,7 +23,7 @@ const Badge = ({ text }) => (
 );
 
 <form>
-  <ReactResponsiveSelect
+  <Select
     customLabelRenderer={selectedOption => <span>🎉 You selected 👉{selectedOption.text}</span>}
     name="make2"
     options={[

@@ -1,10 +1,10 @@
 Use `noSelectionLabel` to set the default text. By default the firt option is selected when `noSelectionLabel` is not present.
 
 ```jsx
-import ReactResponsiveSelect, { CaretIcon, MultiSelectOptionMarkup } from '../../react-responsive-select'; // 'react-responsive-select'
+import { Select, CaretIcon, MultiSelectOptionMarkup } from '../../react-responsive-select'; // 'react-responsive-select'
 
 <form>
-  <ReactResponsiveSelect
+  <Select
     multiselect={true}
     name="make6"
     selectedValues={[]}

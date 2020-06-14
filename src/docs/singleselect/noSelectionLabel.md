@@ -1,7 +1,7 @@
 Use `noSelectionLabel` to set the default text. By default the firt option is selected when `noSelectionLabel` is not present.
 
 ```jsx
-import ReactResponsiveSelect, { CaretIcon } from '../../react-responsive-select'; // 'react-responsive-select'
+import { Select, CaretIcon } from '../../react-responsive-select'; // 'react-responsive-select'
 
 const Badge = ({ text }) => (
   <span>
@@ -13,7 +13,7 @@ const Badge = ({ text }) => (
 );
 
 <form>
-  <ReactResponsiveSelect
+  <Select
     noSelectionLabel="Please select"
     name="make2"
     options={[

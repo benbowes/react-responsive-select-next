@@ -1,11 +1,11 @@
 import * as actionTypes from '../../constants/actionTypes';
-import ReactResponsiveSelect from '../../react-responsive-select';
+import { Select } from '../../react-responsive-select';
 import { IProps, IState } from '../../types/';
 import { multiSelectBroadcastChange, singleSelectBroadcastChange } from '../onChangeBroadcasters';
 
 interface TArgs {
   state: IState;
-  RRSClassRef: ReactResponsiveSelect;
+  RRSClassRef: Select;
   props: IProps;
 }
 

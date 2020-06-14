@@ -1,10 +1,10 @@
 Use `optHeader` in an option to create a visual grouping of options
 
 ```jsx
-import ReactResponsiveSelect, { CaretIcon } from '../../react-responsive-select'; // 'react-responsive-select'
+import { Select, CaretIcon } from '../../react-responsive-select'; // 'react-responsive-select'
 
 <form>
-  <ReactResponsiveSelect
+  <Select
     name="carType1"
     options={[
       { value: 'any', text: 'Any' },

@@ -1,8 +1,8 @@
 ```jsx
-import ReactResponsiveSelect, { CaretIcon, MultiSelectOptionMarkup } from '../../react-responsive-select'; // 'react-responsive-select'
+import { Select, CaretIcon, MultiSelectOptionMarkup } from '../../react-responsive-select'; // 'react-responsive-select'
 
 <form>
-  <ReactResponsiveSelect
+  <Select
     multiselect={true}
     name="make6"
     selectedValues={[]}

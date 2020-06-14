@@ -1,6 +1,6 @@
 import * as actionTypes from '../../constants/actionTypes';
 import { keyCodes } from '../../constants/keyCodes';
-import ReactResponsiveSelect from '../../react-responsive-select';
+import { Select } from '../../react-responsive-select';
 import { IProps, IState } from '../../types/';
 import { preventDefaultForKeyCodes } from '../preventDefaultForKeyCodes';
 import { handleAlphaNumerical } from './handleAlphaNumerical';
@@ -12,7 +12,7 @@ interface TArgs {
   event: KeyboardEvent;
   state: IState;
   props: IProps;
-  RRSClassRef: ReactResponsiveSelect;
+  RRSClassRef: Select;
 }
 
 export function handleKeyEvent({ event, state, props, RRSClassRef }: TArgs): void {
