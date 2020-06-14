@@ -1,9 +1,9 @@
 {
   "license": "MIT",
   "name": "react-responsive-select-next",
-  "main": "dist/ReactResponsiveSelect.js",
-  "typings": "dist/ReactResponsiveSelect.d.ts",
-  "version": "6.0.0-aplha.0",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "version": "6.0.0-aplha.1",
   "files": [
     "dist",
     "src"
