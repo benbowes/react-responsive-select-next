@@ -13,7 +13,7 @@
   },
   "scripts": {
     "start": "npx styleguidist server",
-    "build:styleguide": "npx styleguidist build",
+    "build:styleguide": "npx styleguidist build --ts",
     "build": "tsdx build && npm run copyfiles && npm run deleteUnwantedDistEntries && npm run build:styleguide",
     "copyfiles": "cp src/ReactResponsiveSelect.css dist/ReactResponsiveSelect.css",
     "deleteUnwantedDistEntries": "rm -rf dist/docs && rm -rf dist/__mocks__",

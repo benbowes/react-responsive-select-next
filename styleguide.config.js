@@ -6,7 +6,7 @@ module.exports = {
     sidebarWidth: 280,
   },
   styleguideComponents: {
-    Wrapper: path.join(__dirname, 'src/docs/StyleGuidistWrapper.tsx'),
+    Wrapper: path.join(__dirname, 'src/styleguide/Wrapper.tsx'),
   },
   pagePerSection: true,
   exampleMode: 'expand',
