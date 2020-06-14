@@ -1,5 +1,8 @@
-# react-responsive-select
-![Build status](https://api.travis-ci.org/benbowes/react-responsive-select.svg?branch=master)
+# react-responsive-select-next
+
+![Build status](https://api.travis-ci.org/benbowes/react-responsive-select-next.svg?branch=master)
+
+The in-progess, and **next** version of react-responsive-select [https://www.npmjs.com/package/react-responsive-select]
 
 A customisable, touchable, React single-select / multi-select form control.
 
@@ -19,22 +22,24 @@ Built with keyboard and screen reader accessibility in mind.
 - Easy slot-in to your design system
 - No global styling
 
-
 ## Getting started
 
-Install the dependency - https://www.npmjs.com/package/react-responsive-select
+Install the dependency - https://www.npmjs.com/package/react-responsive-select-next
 
-`npm install react-responsive-select -save-dev`
+`npm install react-responsive-select-next -save-dev`
 
 Example usage:
 
 ```
 import React from 'react';
-import RRS from 'react-responsive-select';
- 
+import { Select, CaretIcon } from 'react-responsive-select-next';
+
+// for default styles...
+import 'react-responsive-select-next/dist/react-responsive-select.css';
+
 const onChange = (newValue) => console.log('onChange', newValue);
 const onSubmit = () => console.log('onSubmit');
- 
+
 const Form = () => (
   <form>
     <RRS
@@ -53,37 +58,26 @@ const Form = () => (
 );
 ```
 
-## StoryBook Examples & Demo 
+## Examples & Demo
 
-https://benbowes.github.io/react-responsive-select/
+https://benbowes.github.io/react-responsive-select-next/
 
 ## API
 
-https://benbowes.github.io/react-responsive-select/?path=/story/info--api
+https://benbowes.github.io/react-responsive-select-next/#/API
 
 ## Screen Reader Demo
 
-https://benbowes.github.io/react-responsive-select/?path=/story/info--screen-reader-demo
+https://benbowes.github.io/react-responsive-select-next/#/Screen%20reader%20demo
 
 ## CodeSandbox.io JavaScript Examples
 
-- Single-Select Example: https://codesandbox.io/s/mo8j53wvwp
+Coming soon...
+
+<!-- - Single-Select Example: https://codesandbox.io/s/mo8j53wvwp
 - Multi-Select Example https://codesandbox.io/s/multiselect-example-reactresponsiveselect-jo9se
 - Controlled Example https://codesandbox.io/s/controlled-example-reactresponsiveselect-jcp1n
-- Using with Formik Example https://codesandbox.io/s/using-reactresponsiveselect-with-formik-l234rznkl
-
-## TypeScript Examples
-
-- See the StoryBook `*.stories.tsx` files in here: https://github.com/benbowes/react-responsive-select/tree/master/src/stories
-
-## Via CDN
-
-- JS:
-[ReactResponsiveSelect.js on unpkg.com](https://unpkg.com/react-responsive-select@latest/dist/ReactResponsiveSelect.js)
-- CSS:
-[ReactResponsiveSelect.css on unpkg.com](https://unpkg.com/react-responsive-select@latest/dist/ReactResponsiveSelect.css)
-
-The [Codepen examples](https://codepen.io/collection/DrjWEk/) are consuming react-responsive-select via CDN if you'd like a guide.
+- Using with Formik Example https://codesandbox.io/s/using-reactresponsiveselect-with-formik-l234rznkl -->
 
 ## Business Rules
 
