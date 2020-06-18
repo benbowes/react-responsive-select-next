@@ -30,24 +30,24 @@ Install the dependency - https://www.npmjs.com/package/react-responsive-select-n
 
 Example usage:
 
-```
+```jsx
 import React from 'react';
 import { Select, CaretIcon } from 'react-responsive-select-next';
 
 // for default styles...
 import 'react-responsive-select-next/dist/react-responsive-select.css';
 
-const onChange = (newValue) => console.log('onChange', newValue);
+const onChange = newValue => console.log('onChange', newValue);
 const onSubmit = () => console.log('onSubmit');
 
 const Form = () => (
   <form>
-    <RRS
+    <Select
       name="make"
       options={[
         { text: 'Any', value: 'null' },
         { text: 'Oldsmobile', value: 'oldsmobile', markup: <span>Oldsmobile</span> },
-        { text: 'Ford', value: 'ford', markup: <span>Ford</span> }
+        { text: 'Ford', value: 'ford', markup: <span>Ford</span> },
       ]}
       selectedValue="oldsmobile"
       onSubmit={onSubmit}
