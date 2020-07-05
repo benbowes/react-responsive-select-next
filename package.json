@@ -3,7 +3,7 @@
   "name": "react-responsive-select-next",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
-  "version": "6.0.0-aplha.7",
+  "version": "6.0.0-aplha.8",
   "files": [
     "dist",
     "src"
