@@ -1,11 +1,12 @@
 ```jsx
-import { Select, CaretIcon, MultiSelectOptionMarkup } from '../../react-responsive-select'; // 'react-responsive-select'
+import { Select, CaretIcon, MultiSelectOptionMarkup, CloseButton } from '../../react-responsive-select'; // 'react-responsive-select'
 
 <form>
   <Select
     multiselect={true}
     name="make6"
     selectedValues={['fiat']}
+    modalCloseButton={<ModalCloseButton />}
     options={[
       {
         value: 'any',

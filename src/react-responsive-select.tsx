@@ -153,7 +153,7 @@ export class Select extends React.Component<IProps, IState> {
   };
 
   public render(): React.ReactNode {
-    const { prefix, caretIcon, disabled } = this.props;
+    const { prefix, caretIcon, disabled, modalCloseButton } = this.props;
     const {
       altered,
       hasOptHeaders,
@@ -210,6 +210,7 @@ export class Select extends React.Component<IProps, IState> {
             isOptionsPanelOpen={isOptionsPanelOpen}
             options={options}
             selectBoxRef={this.selectBox}
+            modalCloseButton={modalCloseButton}
           />
         ) : (
           <SingleSelect
@@ -225,6 +226,7 @@ export class Select extends React.Component<IProps, IState> {
             isOptionsPanelOpen={isOptionsPanelOpen}
             options={options}
             selectBoxRef={this.selectBox}
+            modalCloseButton={modalCloseButton}
           />
         )}
       </div>
