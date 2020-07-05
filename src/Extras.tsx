@@ -9,6 +9,7 @@ export const CaretIcon = (props: any): React.ReactElement => (
     width="11.848px"
     height="6.338px"
     viewBox="351.584 2118.292 11.848 6.338"
+    xmlns="http://www.w3.org/2000/svg"
     {...props}
   >
     <g>
@@ -24,6 +25,7 @@ export const ErrorIcon = (props: any): React.ReactElement => (
     width="12px"
     height="12px"
     viewBox="0 0 1000 1000"
+    xmlns="http://www.w3.org/2000/svg"
     style={{ fill: 'currentColor', marginRight: '4px' }}
     {...props}
   >
@@ -34,13 +36,29 @@ export const ErrorIcon = (props: any): React.ReactElement => (
 );
 
 export const ModalCloseButton = (props: any): React.ReactElement => (
-  <svg className="mobile-close__icon" width="12px" height="12px" viewBox="0 0 2541 2541" {...props}>
+  <svg
+    className="mobile-close__icon"
+    xmlns="http://www.w3.org/2000/svg"
+    width="12px"
+    height="12px"
+    viewBox="0 0 2541 2541"
+    {...props}
+  >
     <path d="M29 172c-39-39-39-103 0-142s103-39 142 0l1099 1099L2369 30c39-39 103-39 142 0s39 103 0 142L1412 1271l1099 1099c39 39 39 103 0 142s-103 39-142 0L1270 1413 171 2512c-39 39-103 39-142 0s-39-103 0-142l1099-1099L29 172z" />
   </svg>
 );
 
 export const CheckboxIcon = (props: any): React.ReactElement => (
-  <svg className="checkbox-icon" x="0px" y="0px" width="12px" height="12px" viewBox="0 0 488.878 488.878" {...props}>
+  <svg
+    className="checkbox-icon"
+    xmlns="http://www.w3.org/2000/svg"
+    x="0px"
+    y="0px"
+    width="12px"
+    height="12px"
+    viewBox="0 0 488.878 488.878"
+    {...props}
+  >
     <g>
       <polygon points="143.294,340.058 50.837,247.602 0,298.439 122.009,420.447 122.149,420.306 144.423,442.58 488.878,98.123 437.055,46.298 " />
     </g>
