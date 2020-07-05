@@ -1,5 +1,5 @@
 ```jsx
-import { Select, CaretIcon, MultiSelectOptionMarkup, CloseButton } from '../../react-responsive-select'; // 'react-responsive-select'
+import { Select, CaretIcon, MultiSelectOptionMarkup, ModalCloseButton } from '../../react-responsive-select'; // 'react-responsive-select'
 
 <form>
   <Select
