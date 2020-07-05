@@ -70,7 +70,7 @@ export class MultiSelect extends React.Component<TProps> {
       options,
       nextPotentialSelectionIndex,
       prefix,
-      modalCloseButton
+      modalCloseButton,
     } = this.props;
 
     let optHeaderLabel: string = '';
@@ -145,7 +145,11 @@ export class MultiSelect extends React.Component<TProps> {
           className="rrs__options"
           ref={this.optionsContainer}
         >
-          {!!modalCloseButton && <li aria-hidden="true" className="mobile-close">{modalCloseButton}</li>}
+          {!!modalCloseButton && (
+            <li aria-hidden="true" className="mobile-close">
+              {modalCloseButton}
+            </li>
+          )}
           {options.length > 0 &&
             options.map((option: IOption, index: number) => {
               if (option.optHeader) {
