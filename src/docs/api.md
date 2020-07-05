@@ -16,8 +16,7 @@ const API = () => (
           <td>name (required)</td>
           <td>String</td>
           <td>
-            A unique name to associate a select with it's selected option
-            value/s
+            A unique name to associate a select with it's selected option value/s
             <br />
             (also used on form submit)
           </td>
@@ -60,10 +59,7 @@ const API = () => (
                   <td>text</td>
                   <td>String</td>
                   <td>yes</td>
-                  <td>
-                    display value for the select and the default for the option
-                    label
-                  </td>
+                  <td>display value for the select and the default for the option label</td>
                 </tr>
                 <tr>
                   <td>value</td>
@@ -73,29 +69,23 @@ const API = () => (
                 </tr>
                 <tr>
                   <td>markup</td>
-                  <td>JSX</td>
+                  <td>ReactNode</td>
                   <td>&nbsp;</td>
-                  <td>
-                    JSX markup used as the option label. Allows for the use of
-                    badges and icons...
-                  </td>
+                  <td>JSX markup used as the option label. Allows for the use of badges and icons...</td>
                 </tr>
                 <tr>
                   <td>optHeader</td>
                   <td>Boolean</td>
                   <td>&nbsp;</td>
                   <td>
-                    Will display an option header when present. Use with a{' '}
-                    <code>text</code> property
+                    Will display an option header when present. Use with a <code>text</code> property
                   </td>
                 </tr>
                 <tr>
                   <td>disabled</td>
                   <td>Boolean</td>
                   <td>&nbsp;</td>
-                  <td>
-                    disable option - option cannot be selected and is greyed
-                  </td>
+                  <td>disable option - option cannot be selected and is greyed</td>
                 </tr>
               </tbody>
             </table>
@@ -103,8 +93,7 @@ const API = () => (
             <br />
 
             <p>
-              Note: <code>text</code> is used as the option label when{' '}
-              <code>markup</code> is not present
+              Note: <code>text</code> is used as the option label when <code>markup</code> is not present
             </p>
           </td>
         </tr>
@@ -130,8 +119,7 @@ const API = () => (
               </pre>
             </code>
             <p>
-              Note: <code>altered</code> signifies whether a select has been
-              changed from it's original value.
+              Note: <code>altered</code> signifies whether a select has been changed from it's original value.
             </p>
           </td>
         </tr>
@@ -153,23 +141,21 @@ const API = () => (
               </pre>
             </code>
             <p>
-              Note: <code>altered</code> signifies whether a select has been
-              changed from it's original value.
+              Note: <code>altered</code> signifies whether a select has been changed from it's original value.
             </p>
           </td>
         </tr>
         <tr>
           <td>caretIcon</td>
-          <td>JSX</td>
+          <td>ReactNode</td>
           <td>Add a dropdown icon by using JSX markup</td>
         </tr>
         <tr>
           <td>selectedValue</td>
           <td>String</td>
           <td>
-            Pre-select an option with this value - should match an existing{' '}
-            <code>option.value</code>, or if omitted the first item will be
-            selected
+            Pre-select an option with this value - should match an existing <code>option.value</code>, or if omitted the
+            first item will be selected
           </td>
         </tr>
         <tr>
@@ -186,8 +172,8 @@ const API = () => (
           <td>noSelectionLabel</td>
           <td>string</td>
           <td>
-            A custom label to be used when nothing is selected. When used, the
-            first option is not automatically selected
+            A custom label to be used when nothing is selected. When used, the first option is not automatically
+            selected
           </td>
         </tr>
         <tr>
@@ -196,9 +182,8 @@ const API = () => (
           <td>
             <p>Allows you to format your own custom select label.</p>
             <p>
-              The customLabelRenderer function returns an array option objects.
-              To use this feature, you need to construct and return some JSX
-              using the below param
+              The customLabelRenderer function returns an array option objects. To use this feature, you need to
+              construct and return some JSX using the below param
             </p>
             <code>
               <pre>
@@ -232,10 +217,7 @@ const API = () => (
                 <tr>
                   <td>name</td>
                   <td>string</td>
-                  <td>
-                    The name prop you passed into the ReactResponsiveSelect
-                    component
-                  </td>
+                  <td>The name prop you passed into the ReactResponsiveSelect component</td>
                 </tr>
                 <tr>
                   <td>actionType</td>
@@ -248,10 +230,8 @@ const API = () => (
             <br />
 
             <p>
-              Handy for those situations where you need to change something
-              potentially outside of your control, e.g. setting a class on{' '}
-              {'<body/>'} when the options panel opens to inhibit body
-              scrolling.
+              Handy for those situations where you need to change something potentially outside of your control, e.g.
+              setting a class on {'<body/>'} when the options panel opens to inhibit body scrolling.
             </p>
           </td>
         </tr>
@@ -272,14 +252,22 @@ const API = () => (
             </code>
           </td>
         </tr>
+        <tr>
+          <td>modalCloseButton</td>
+          <td>ReactNode</td>
+          <td>
+            <p>
+              Add a close button for when the the mobile view shows the selection modal. You'll essentially be clicking
+              the background so this is purely visual.
+            </p>
+          </td>
+        </tr>
       </tbody>
     </table>
 
     <h2 className="table-header">
       MultiSelect mode
-      <small>
-        * Same as SingleSelect mode, but with the following amendments
-      </small>
+      <small>* Same as SingleSelect mode, but with the following amendments</small>
     </h2>
 
     <table>
@@ -294,9 +282,8 @@ const API = () => (
           <td>Array of String values</td>
           <td>
             <p>
-              Pre-select several options with this value - should match against
-              an existing <code>option.value</code>, or if omitted, the first
-              item will be selected.
+              Pre-select several options with this value - should match against an existing <code>option.value</code>,
+              or if omitted, the first item will be selected.
             </p>
             e.g. <code>
               selectedValues={'{['}'mazda', 'ford'{']}'}
@@ -324,8 +311,7 @@ const API = () => (
             </code>
             <br />
             <p>
-              Note: <code>altered</code> signifies whether a select has been
-              changed from it's original value.
+              Note: <code>altered</code> signifies whether a select has been changed from it's original value.
             </p>
           </td>
         </tr>
@@ -349,8 +335,7 @@ const API = () => (
               </pre>
             </code>
             <p>
-              Note: <code>altered</code> signifies whether a select has been
-              changed from it's original value.
+              Note: <code>altered</code> signifies whether a select has been changed from it's original value.
             </p>
           </td>
         </tr>

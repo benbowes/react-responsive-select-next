@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 
 /* tslint:disable:max-line-length*/
 export const CaretIcon = (props: any): React.ReactElement => (
@@ -33,6 +33,12 @@ export const ErrorIcon = (props: any): React.ReactElement => (
   </svg>
 );
 
+export const ModalCloseButton = (props: any): React.ReactElement => (
+  <svg className="mobile-close__icon" width="12px" height="12px" viewBox="0 0 2541 2541" {...props}>
+    <path d="M29 172c-39-39-39-103 0-142s103-39 142 0l1099 1099L2369 30c39-39 103-39 142 0s39 103 0 142L1412 1271l1099 1099c39 39 39 103 0 142s-103 39-142 0L1270 1413 171 2512c-39 39-103 39-142 0s-39-103 0-142l1099-1099L29 172z" />
+  </svg>
+);
+
 export const CheckboxIcon = (props: any): React.ReactElement => (
   <svg className="checkbox-icon" x="0px" y="0px" width="12px" height="12px" viewBox="0 0 488.878 488.878" {...props}>
     <g>
@@ -42,11 +48,11 @@ export const CheckboxIcon = (props: any): React.ReactElement => (
 );
 
 export const MultiSelectOptionMarkup = ({ text, ...props }: { text: string; props: any }): React.ReactElement => (
-  <div {...props}>
+  <div className="checkbox-container">
     <span className="checkbox">
-      <CheckboxIcon />
+      <CheckboxIcon {...props} />
     </span>
-    <span> {text}</span>
+    <span className="checkbox-text"> {text}</span>
   </div>
 );
 /* tslint:enable:max-line-length */

@@ -88,6 +88,11 @@ export interface IProps {
    * `onDeselect` passes back the option you just deselected (multiselect)
    */
   onDeselect?: (option: IOption) => void;
+  /**
+   * Add a close button for when the the mobile view shows the selection modal.
+   * You'll essentially be clicking the background so this is purely visual.
+   */
+  modalCloseButton?: React.ReactNode;
 }
 
 export interface IState {

@@ -1,9 +1,10 @@
 ```jsx
-import { Select, CaretIcon } from '../../react-responsive-select'; // 'react-responsive-select'
+import { Select, CaretIcon, CloseButton } from '../../react-responsive-select'; // 'react-responsive-select'
 
 <form>
   <Select
     name="carType1"
+    modalCloseButton={<ModalCloseButton />}
     options={[
       { value: 'null', text: 'Any' },
       { value: 'alfa-romeo', text: 'Alfa Romeo' },
