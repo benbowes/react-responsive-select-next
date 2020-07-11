@@ -196,6 +196,11 @@ export class Select extends React.Component<IProps, IState> {
         onMouseDown={this.onHandleClick}
         onBlur={this.onHandleBlur}
       >
+        {!!modalCloseButton && isOptionsPanelOpen === true && (
+          <div aria-hidden="true" className="mobile-close">
+            {modalCloseButton}
+          </div>
+        )}
         {multiselect ? (
           <MultiSelect
             disabled={Boolean(disabled)}
@@ -210,7 +215,6 @@ export class Select extends React.Component<IProps, IState> {
             isOptionsPanelOpen={isOptionsPanelOpen}
             options={options}
             selectBoxRef={this.selectBox}
-            modalCloseButton={modalCloseButton}
           />
         ) : (
           <SingleSelect
@@ -226,7 +230,6 @@ export class Select extends React.Component<IProps, IState> {
             isOptionsPanelOpen={isOptionsPanelOpen}
             options={options}
             selectBoxRef={this.selectBox}
-            modalCloseButton={modalCloseButton}
           />
         )}
       </div>
