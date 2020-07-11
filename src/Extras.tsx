@@ -36,16 +36,18 @@ export const ErrorIcon = (props: any): React.ReactElement => (
 );
 
 export const ModalCloseButton = (props: any): React.ReactElement => (
-  <svg
-    className="mobile-close__icon"
-    xmlns="http://www.w3.org/2000/svg"
-    width="12px"
-    height="12px"
-    viewBox="0 0 2541 2541"
-    {...props}
-  >
-    <path d="M29 172c-39-39-39-103 0-142s103-39 142 0l1099 1099L2369 30c39-39 103-39 142 0s39 103 0 142L1412 1271l1099 1099c39 39 39 103 0 142s-103 39-142 0L1270 1413 171 2512c-39 39-103 39-142 0s-39-103 0-142l1099-1099L29 172z" />
-  </svg>
+  <div>
+    <svg
+      className="mobile-close__icon"
+      xmlns="http://www.w3.org/2000/svg"
+      width="12px"
+      height="12px"
+      viewBox="0 0 2541 2541"
+      {...props}
+    >
+      <path d="M29 172c-39-39-39-103 0-142s103-39 142 0l1099 1099L2369 30c39-39 103-39 142 0s39 103 0 142L1412 1271l1099 1099c39 39 39 103 0 142s-103 39-142 0L1270 1413 171 2512c-39 39-103 39-142 0s-39-103 0-142l1099-1099L29 172z" />
+    </svg>
+  </div>
 );
 
 export const CheckboxIcon = (props: any): React.ReactElement => (
