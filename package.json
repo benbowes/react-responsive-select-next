@@ -1,9 +1,9 @@
 {
-  "license": "MIT",
   "name": "react-responsive-select-next",
+  "license": "MIT",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
-  "version": "6.0.0-aplha.9",
+  "version": "6.0.0-aplha.10",
   "files": [
     "dist",
     "src"
@@ -36,24 +36,10 @@
     "singleQuote": true,
     "trailingComma": "es5"
   },
-  "keywords": [
-    "select",
-    "react select",
-    "react dropdown",
-    "accessible react select",
-    "component",
-    "responsive",
-    "mobile",
-    "touch",
-    "select",
-    "dropdown",
-    "accessible",
-    "multiselect"
-  ],
   "author": "Ben Bowes <bb@benbowes.com>",
   "repository": {
     "type": "git",
-    "url": "https://github.com/benbowes/react-responsive-select"
+    "url": "https://github.com/benbowes/react-responsive-select-next"
   },
   "module": "dist/react-responsive-select-next.esm.js",
   "devDependencies": {
