@@ -54,7 +54,7 @@
     "react-styleguidist": "^11.0.8",
     "style-loader": "^1.2.1",
     "ts-loader": "^7.0.5",
-    "tsdx": "^0.13.2",
+    "tsdx": "^2.0.0",
     "tslib": "^2.0.0",
     "typescript": "^3.9.3",
     "webpack": "^4.43.0",
